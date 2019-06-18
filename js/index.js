@@ -1,11 +1,4 @@
 // Your code goes here
-// const nav = document.querySelector('header nav')
-// nav.addEventListener('click', event => {
-//     console.log('Clicked', event.target.textContent, event.screenX, event.screenY)
-
-//     const title = document.querySelector('h1.main-navigation')
-//     title.textContent = event.target.textContent
-// })
 
 //load
 window.addEventListener("load", function(event){
@@ -18,26 +11,23 @@ window.addEventListener("close", function(event){
     alert(`Why are you leaving?`)
 }, false);
 
+//resize
+window.addEventListener("resize", function(){
+    TweenMax.to(".img1", 1, {scale: .9} );
+})
+
 //scroll
 window.addEventListener("scroll", function(event){
     const random = e.timestmp % 256 * Math.random();
-    document.body.style.background = `rgba(${random}, ${random}, ${random, 0.3`;
+    document.body.style.background = `rgba(${random}, ${random}, ${random}, 0.3`;
     console.log(e.timeStamp % 256 * Math.random())
 }) 
 
-// let scrollposition = 0;
-// let now = false;
-
-//     scrollposition = window.scrollY;
-    
-//     if (!now) {
-//         window.doSomething(function () {
-//             scrollposition = window.scrollX;
-//             now = false;
-//         });
-//         now = true;
-//     }
-// });
+//keyup
+const body = document.querySelector("body");
+body.addEventListener("keyup", function (){
+    body.style.backgroundColor = "yellow";
+})
 
 //dblclick
 const stop = document.querySelector('h1');
@@ -93,6 +83,10 @@ const img1 = document.querySelector("#img1");
 img1.addEventListener("mouseup", function(event){
     event.target.style.opacity = '2';
 });
+//dblclick
+img1.addEventListener('dblclick', (event) => {
+    alert("Keep Scrolling...")
+  });
 //mouseout
 const img2 = document.querySelector("#img2");
 img2.addEventListener("mouseout", function(event){
@@ -106,21 +100,32 @@ const img4 = document.querySelector("#img4");
 img4.addEventListener("mouseout", function(event){
     event.target.style.border = '2rem solid #17A2B8';
 });
+
+//dblclick
+img4.addEventListener('dblclick', (event) => {
+    alert("Would like like to come here?")
+  });
+
 //mouseup
 img4.addEventListener("mouseup", function(event){
     event.target.style.opacity = '2';
 });
-// let btn = document.getElementById("button");
-// button.addEventListener("select", function(event) {
-// }
 
-// let text = document.getElementById("content-section");
-// text.addEventListener("select", function(event) {
-//     log.textContent = `You Selected ${selection}`;
-// })
-  
+//drag
+let footer = document.querySelector(".footer");
+footer.addEventListener('drag', (event) => {
+    event.preventDefault();
+  })
 
+//keydown
+footer.addEventListener('keydown', (event) => {
+    event.preventDefault();
+  })
 
+//mouseover
+footer.addEventListener("mouseover", function(event){
+    event.target.style.background = "#17A2B8";
+})
   
 //Nav links
 const nolinks = document.querySelector("nav");
