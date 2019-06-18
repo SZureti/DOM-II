@@ -7,25 +7,109 @@
 //     title.textContent = event.target.textContent
 // })
 
+//load
 window.addEventListener("load", function(event){
     alert("Welcome to your new home, stay a while...");
 })
 
+//close
+window.addEventListener("close", function(event){
+    event.preventDefault();
+    alert(`Why are you leaving?`)
+}, false);
+
+//scroll
+window.addEventListener("scroll", function(event){
+    const random = e.timestmp % 256 * Math.random();
+    document.body.style.background = `rgba(${random}, ${random}, ${random, 0.3`;
+    console.log(e.timeStamp % 256 * Math.random())
+}) 
+
+// let scrollposition = 0;
+// let now = false;
+
+//     scrollposition = window.scrollY;
+    
+//     if (!now) {
+//         window.doSomething(function () {
+//             scrollposition = window.scrollX;
+//             now = false;
+//         });
+//         now = true;
+//     }
+// });
+
+//dblclick
 const stop = document.querySelector('h1');
 stop.addEventListener('dblclick', (event) => {
   alert("Welcome to the Fun Bus!")
 });
 
-
+//mouseover
 let btn1 = document.querySelector("#btn1");
 btn1.addEventListener("mouseover", function (event){
     event.target.style.background = "black";
 })
 
+//mouseleave
 btn1.addEventListener("mouseleave", function (event){
     event.target.style.background = "#17A2B8";
 })
 
+//click
+let btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", function (event){
+    event.target.style.background = "red";
+})
+
+//mouseover
+let btn3 = document.querySelector("#btn3");
+btn3.addEventListener("mouseover", function (event){
+    event.target.style.background = "black";
+})
+
+//mouseleave
+btn3.addEventListener("mouseleave", function (event){
+    event.target.style.background = "#17A2B8";
+})
+
+//copy
+let text = document.querySelector("#text");
+text.addEventListener("copy", function (event){
+    alert("What are you trying to do there????");
+})
+
+//fullscreen
+document.addEventListener("fullscreenchange", (event) => {
+    if (document.fullscreenElement) {
+        console.log(`Element: ${document.fullscreenElement.id} entered full-screen mode.`);
+    } else {
+        console.log("Leaving full-screen mode.");
+    }
+});
+
+//mouseup
+const img1 = document.querySelector("#img1");
+img1.addEventListener("mouseup", function(event){
+    event.target.style.opacity = '2';
+});
+//mouseout
+const img2 = document.querySelector("#img2");
+img2.addEventListener("mouseout", function(event){
+    event.target.style.border = '2rem solid #17A2B8';
+});
+const img3 = document.querySelector("#img3");
+img3.addEventListener("mouseout", function(event){
+    event.target.style.border = '2rem solid #17A2B8';
+});
+const img4 = document.querySelector("#img4");
+img4.addEventListener("mouseout", function(event){
+    event.target.style.border = '2rem solid #17A2B8';
+});
+//mouseup
+img4.addEventListener("mouseup", function(event){
+    event.target.style.opacity = '2';
+});
 // let btn = document.getElementById("button");
 // button.addEventListener("select", function(event) {
 // }
@@ -35,42 +119,12 @@ btn1.addEventListener("mouseleave", function (event){
 //     log.textContent = `You Selected ${selection}`;
 // })
   
-var dragged;
-document.addEventListener("drag", function(event){
 
-}, false);
 
-document.addEventListener("dragover", function(event){
-    event.preventDefault();
-}, false);
-
-document.addEventListener('keydown', logkey);
-
-function logkey(event) {
-    log.textContent += `${e.code}`;
-}
-// stop.addEventListener('drag', (event) => {
-//     event.preventDefault();
-//   })
   
-
-
-// function logSelection(event) {
-//     const log = document.getElementById('log');
-//     const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
-//     log.textContent = `You selected: ${selection}`;
-// }
-
-// const text = document.querySelector('content-section');
-// text.addEventListener('select', logSelection);
-
-// let title = document getElementById("title");
-// title.addEventListener("mouseover", event => {
-//     title.style.color = "orange";
-//     title.style.color = "aqua";
-// })
-
-// let title = document querySelector("title");
-// title.addEventListener("mouseleave", event => {
-//     title.style.backgroundcolor = "white";
-// })
+//Nav links
+const nolinks = document.querySelector("nav");
+nolinks.addEventListener("click", function(event){
+    event.preventDefault();
+    alert(`Nothing for you there either...`);
+})
