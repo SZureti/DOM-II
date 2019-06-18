@@ -18,7 +18,7 @@ window.addEventListener("resize", function(){
 
 //scroll
 window.addEventListener("scroll", function(event){
-    const random = e.timestmp % 256 * Math.random();
+    const random = e.timeStamp % 256 * Math.random();
     document.body.style.background = `rgba(${random}, ${random}, ${random}, 0.3`;
     console.log(e.timeStamp % 256 * Math.random())
 }) 
