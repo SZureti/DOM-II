@@ -52,8 +52,8 @@ Using the 10 unique events, find ways to update the DOM in creative ways. For ex
 
 ## Stretch Task:
 
-* [ ] Go look at [GSAP](https://greensock.com/) and implement the animations found in that library with your custom events.
+* [x] Go look at [GSAP](https://greensock.com/) and implement the animations found in that library with your custom events.
 
 ## Stretch assignment
 
-* [ ] Take a look at the [stretch assignment](stretch-assignment) and follow the instructions in the read me file.
+* [x] Take a look at the [stretch assignment](stretch-assignment) and follow the instructions in the read me file.

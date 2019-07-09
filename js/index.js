@@ -8,7 +8,7 @@ window.addEventListener("load", function(event){
 //close
 window.addEventListener("close", function(event){
     event.preventDefault();
-    alert(`Why are you leaving?`)
+    alert(`Why are you leaving?`);
 }, false);
 
 //resize
@@ -133,3 +133,7 @@ nolinks.addEventListener("click", function(event){
     event.preventDefault();
     alert(`Nothing for you there either...`);
 })
+
+// window.addEventListener("click", function(){
+//     TweenMax.to(".logo-heading", 3, {rotation:360, scale:0.5});
+// })  
