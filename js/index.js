@@ -134,6 +134,24 @@ nolinks.addEventListener("click", function(event){
     alert(`Nothing for you there either...`);
 })
 
-// window.addEventListener("click", function(){
-//     TweenMax.to(".logo-heading", 3, {rotation:360, scale:0.5});
-// })  
+//Animations
+
+window.addEventListener("click", function(){
+    TweenMax.to(".logo-heading", 3, {rotation:360, scale:1.5});
+})  
+
+window.addEventListener("click", function(){
+    TweenMax.to(".title", 3, {rotation:360, scale:0.9});
+})  
+
+window.addEventListener("click", function(){
+    TweenMax.to("h2", 3, {rotation:360, scale:0.9});
+})  
+
+window.addEventListener("click", function(){
+    TweenMax.to("h3", 3, {rotation:360, scale:0.9});
+})  
+
+window.addEventListener("mouseover", function(){
+    TweenMax.to("a", 3, {rotation:360, scale:0.9});
+})  
