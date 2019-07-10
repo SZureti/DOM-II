@@ -1,6 +1,14 @@
 body {
   display: flex;
+  background-color: black;
+  /* background: url(https://i.ibb.co/s3ZyMnZ/23801789061-fca25eb1e0-o-2.jpg) no-repeat; */
   /*justify-content: center;*/
+}
+
+.bg-photo {
+  /* background: url(https://i.ibb.co/s3ZyMnZ/23801789061-fca25eb1e0-o-2.jpg); */
+  width: 100%;
+  height: auto;
 }
 
 .blocks {
@@ -13,6 +21,7 @@ body {
   width: 100px;
   height: 100px;
   margin: 10px;
+  order: 1;
 }
 
 .block--red {
@@ -33,4 +42,12 @@ body {
 
 .block--gray {
   background-color: gray;
+}
+
+.box {
+  z-index: 99;
+  order: 9999;
+  display: flex-end; 
+  margin: 700px 0 0 -863px;
+ 
 }
